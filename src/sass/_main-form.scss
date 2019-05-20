@@ -1,0 +1,131 @@
+.main-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 20px;
+
+  &__video {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+    }
+
+    &.active {
+      iframe {
+        visibility: visible;
+      }
+      .main-form__video-bg {
+        z-index: -10;
+      }
+    }
+  }
+  &__video-bg {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-image: url("../../src/img/video-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__video-play-btn {
+    max-width: 80px;
+    cursor: pointer;
+  }
+
+  &__form {
+    background-color: $grey;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__input {
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: $white;
+
+    &::placeholder {
+      font-size: 16px;
+      color: $grey-light;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__footer-wrapper {
+    position: relative;
+    padding: 20px 25px;
+  }
+  &__btn {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  &__footer {
+    width: 100%;
+    background-color: $blue;
+    text-align: center;
+    transition: all ease-in-out .15s;
+
+    &:hover {
+      background-color: #4c00a2;
+      transition: all ease-in-out .3s;
+    }
+  }
+  &__text {
+    color: $white;
+    line-height: 1.2;
+
+    &--big {
+      font-size: 20px;
+    }
+    &--middle {
+      font-size: 16px;
+    }
+    &--small {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 640px){
+.content {
+  &__inner {
+    padding: 0 15px;
+  }
+}
+}
+@media (max-width: 420px){
+  .main-form {
+    &__video {
+      height: 250px;
+    }
+    &__video-bg {
+      background-position-x: 50%;
+    }
+    &__video-play-btn {
+      max-width: 60px;
+    }
+    &__input {
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.content {
+  background-color: $white;
+  &__inner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

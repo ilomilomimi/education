@@ -1,0 +1,17 @@
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "layout";
+@import "header";
+@import "content";
+@import "main-form";
+@import "df-checkbox";
+@import "photo";
+@import "social";
+@import "footer";
+
+body {
+  font-family: "ArialRegular";
+  font-size: 14px;
+  font-weight: normal;
+}

@@ -1,0 +1,33 @@
+.df-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+
+  &__input {
+    display: none;
+  }
+
+  &__box {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    margin-right: 15px;
+    background-image: url(../../src/img/checked.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-size: 0;
+    transition: all ease-in-out .15s;
+  }
+
+  &__description {
+    font-size: 12px;
+    color: $white;
+
+  }
+}
+.df-checkbox__input:checked + .df-checkbox__box {
+  background-size: 80%;
+  transition: all ease-in-out .3s;
+}
